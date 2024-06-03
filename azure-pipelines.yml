@@ -6,7 +6,9 @@ parameters:
   type: boolean
   default: false
 
-trigger:
+trigger: none
+
+pr:
 - main
 
 
@@ -14,7 +16,7 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: Work
+- job: Work2
   steps:
   - script: echo Hello, world!
     displayName: 'Run a one-line script'
