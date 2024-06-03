@@ -9,7 +9,6 @@ parameters:
 trigger: none
 
 pr:
-- main
 - ere
 
 
