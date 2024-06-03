@@ -9,7 +9,7 @@ parameters:
 trigger: none
 
 pr:
-- ere
+- main
 
 
 pool:
