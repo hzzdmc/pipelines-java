@@ -9,8 +9,7 @@ parameters:
 trigger: none
 
 
-pr:
-- main
+
 
 
 
