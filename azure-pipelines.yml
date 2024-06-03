@@ -8,17 +8,19 @@ parameters:
 
 trigger: none
 
+
 pr:
 - main
+
 
 
 pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: Work1
+- job: Work33
   steps:
-  - script: echo Hello, world11!
+  - script: echo Hello, world33!
     displayName: 'Run a one-line script'
 
 
