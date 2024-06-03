@@ -9,6 +9,11 @@ parameters:
 trigger: none
 
 
+pr:
+- main
+
+
+
 pool:
   vmImage: ubuntu-latest
 
