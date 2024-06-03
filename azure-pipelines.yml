@@ -10,6 +10,7 @@ trigger: none
 
 pr:
 - main
+- ere
 
 
 pool:
@@ -19,6 +20,11 @@ jobs:
 - job: Work2
   steps:
   - script: echo Hello, world!
+    displayName: 'Run a one-line script'
+
+- job: Work1
+  steps:
+  - script: echo Hello, world11!
     displayName: 'Run a one-line script'
 
 
