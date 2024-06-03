@@ -9,16 +9,16 @@ parameters:
 trigger: none
 
 pr:
-- main
+- ere
 
 
 pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: Work2
+- job: Work1
   steps:
-  - script: echo Hello, world!
+  - script: echo Hello, world11!
     displayName: 'Run a one-line script'
 
 
