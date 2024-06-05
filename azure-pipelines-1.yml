@@ -1,1 +1,23 @@
+trigger: none
+
+pr: 
+- main
+
+resources:
+ pipelines:
+   - pipeline: secrui 
+     source: hzzdmc.pipelines-java
+     trigger:
+       branches:
+         include:
+           - main
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+- job: Workhzz22
+  steps:
+  - script: echo Hello, world44!
+    displayName: 'Run a one-line script'
 
