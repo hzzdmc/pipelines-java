@@ -11,6 +11,14 @@ trigger: none
 pr: 
 - main
 
+resources:
+ pipelines:
+   - pipeline: secrui 
+     source: hzzdmc.pipelines-java
+     trigger:
+       branches:
+         include:
+           - main
 
 pool:
   vmImage: ubuntu-latest
