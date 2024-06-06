@@ -11,8 +11,11 @@ pr:
 pool:
   vmImage: ubuntu-latest
 
-jobs:
-- job: Work111
-  steps:
-  - script: echo Hello, world44!
-    displayName: 'Run a one-line script'
+stages:
+- stage: goood
+
+  jobs:
+  - job: Work111
+    steps:
+    - script: echo Hello, world44!
+      displayName: 'Run a one-line script'
