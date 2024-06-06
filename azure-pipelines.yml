@@ -8,8 +8,7 @@ trigger: none
 pr: 
 - main
 
-pool:
-  vmImage: ubuntu-latest
+
 
 stages:
 - stage: 
@@ -17,15 +16,15 @@ stages:
 
   jobs:
   - job: Work111
+    pool:   
+      vmImage: ubuntu-latest
     steps:
     - script: echo Hello, world44!
       displayName: 'Run a one-line script'
-      
-- stage: 
-  displayName: final
 
-  jobs:
   - job: Work123
+    pool:   
+      vmImage: windows-latest
     steps:
     - script: echo Hello, world123!
-      displayName: 'Run a one-line script'
+      displayName: 'Run a one-line script'  
