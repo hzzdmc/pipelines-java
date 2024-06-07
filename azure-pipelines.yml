@@ -8,6 +8,8 @@ variables:
   - group: "firstaa"
   - name: aqc
     value: bbb
+  - name: va
+    value: $[variables.qweqwe]
 
 trigger: none
 
@@ -26,6 +28,8 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - script: echo $(qweqwe)
+    - script: echo ${{variables.va}}
+    - script: echo $[variables.va]
       displayName: 'Run a one-line script'
 
 - stage: 
