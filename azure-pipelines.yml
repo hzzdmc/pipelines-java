@@ -22,7 +22,7 @@ stages:
     pool:   
       vmImage: ubuntu-latest
     steps:
-    - script: "$[qweqwe]"
+    - script: "$[first variable group.qweqwe]"
       displayName: 'Run a one-line script'
 
 - stage: 
