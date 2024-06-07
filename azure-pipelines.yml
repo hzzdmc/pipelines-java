@@ -5,7 +5,7 @@
 
 
 variables:
-- group: "first variable group"
+- group: first variable group
 trigger: none
 
 pr: 
@@ -22,7 +22,7 @@ stages:
     pool:   
       vmImage: ubuntu-latest
     steps:
-    - script: "$[qweqwe]"
+    - script: echo $[qweqwe]
       displayName: 'Run a one-line script'
 
 - stage: 
