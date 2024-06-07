@@ -5,7 +5,10 @@
 
 
 variables:
-- group: "first variable group"
+  - group: "first variable group"
+  - name: aqc
+    value: bbb
+
 trigger: none
 
 pr: 
@@ -22,7 +25,7 @@ stages:
     pool:   
       vmImage: ubuntu-latest
     steps:
-    - script: echo $(qweqwe)
+    - script: echo $[aqc]
       displayName: 'Run a one-line script'
 
 - stage: 
