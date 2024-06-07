@@ -25,7 +25,7 @@ stages:
     pool:   
       vmImage: ubuntu-latest
     steps:
-    - script: echo $[aqc]
+    - script: echo $[variables.aqc]
       displayName: 'Run a one-line script'
 
 - stage: 
