@@ -8,6 +8,8 @@ variables:
   - group: "firstaa"
   - name: aqc
     value: bbb
+  - name: qw
+    value: $(variables.qweqwe)
 
 trigger: none
 
@@ -26,8 +28,7 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - script: echo $(aqc)
-    - script: echo ${{ variables.aqc }}
-    - script: echo $[ variables.aqc ]
+    - script: echo ${{ variables.qw }}
       displayName: 'Run a one-line script'
 
 - stage: 
