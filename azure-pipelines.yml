@@ -5,7 +5,7 @@
 
 
 variables:
-  - group: "first variable group"
+  - group: "firstaa"
   - name: aqc
     value: bbb
 
@@ -25,7 +25,7 @@ stages:
     pool:   
       vmImage: ubuntu-latest
     steps:
-    - script: echo ${{first variable group.qweqwe}}
+    - script: echo ${{firstaa.qweqwe}}
       displayName: 'Run a one-line script'
 
 - stage: 
