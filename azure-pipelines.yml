@@ -28,7 +28,6 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - script: echo $(qweqwe)
-    - script: echo ${{variables.va}}
     - script: echo $[variables.va]
       displayName: 'Run a one-line script'
 
