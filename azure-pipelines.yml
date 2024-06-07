@@ -9,7 +9,7 @@ variables:
   - name: aqc
     value: bbb
   - name: va
-    value: $[variables.qweqwe]
+    value: ${{variables.qweqwe}}
 
 trigger: none
 
