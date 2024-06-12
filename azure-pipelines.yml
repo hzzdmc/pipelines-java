@@ -9,7 +9,7 @@ variables:
   - name: aqc
     value: bbb
   - name: qw
-    value: $(variables.qweqwe)
+    value: $(variables.qq)
 
 trigger: none
 
@@ -28,7 +28,7 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - script: echo $(qw)
-    - script: echo ${{ variables.qw }}
+    - script: echo ${{ variables.qq }}
       displayName: 'Run a one-line script'
 
 - stage: 
