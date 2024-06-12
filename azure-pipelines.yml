@@ -9,7 +9,7 @@ variables:
   - name: aqc
     value: bbb
   - name: qw
-    value: $(variables.qq)
+    value: $(qq)
 
 trigger: none
 
