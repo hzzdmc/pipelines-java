@@ -29,7 +29,7 @@ stages:
   jobs:
   - job: Work111
     pool:   
-      vmImage: ubuntu-latest
+      vmImage: ubuntu-22.04
     steps:
     - script: echo $(qw)
     - script: echo ${{ variables.qq }}
