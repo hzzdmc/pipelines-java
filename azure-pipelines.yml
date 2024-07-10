@@ -9,7 +9,7 @@ variables:
   - name: aqc
     value: bbb
   - name: qw
-    value: $(qq)
+    value: $(qq) 
 
 trigger: none
 
@@ -34,7 +34,7 @@ stages:
         vmImage: windows-latest
       steps:
       - script: echo $(qw)
-      - script: echo ${{ variables.qq }}
+      - script: echo ${{ variables.aqc }}
       - script: echo $[variables.qq]
       - script: echo $[variables.qw]
       - script: echo $[variables.aqc]
