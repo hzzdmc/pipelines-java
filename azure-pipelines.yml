@@ -33,6 +33,9 @@ stages:
     steps:
     - script: echo $(qw)
     - script: echo ${{ variables.qq }}
+    - script: echo $[variables.qq]
+    - script: echo $[variables.qw]
+    - script: echo $[{{ variables.qq }}]
       displayName: 'Run a one-line script'
 
 - stage: 
