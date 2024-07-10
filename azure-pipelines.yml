@@ -23,20 +23,7 @@ pr:
 
 
 stages:
-- stage: 
-  displayName: good
 
-  jobs:
-  - job: Work111
-    pool:   
-      vmImage: ubuntu-22.04
-    steps:
-    - script: echo $(qw)
-    - script: echo ${{ variables.qq }}
-    - script: echo $[variables.qq]
-    - script: echo $[variables.qw]
-    - script: echo $[{{ variables.qq }}]
-      displayName: 'Run a one-line script'
 
 - stage: 
   displayName: good
@@ -46,5 +33,9 @@ stages:
       pool:   
         vmImage: windows-latest
       steps:
-      - script: echo Hello, world123!
+      - script: echo $(qw)
+      - script: echo ${{ variables.qq }}
+      - script: echo $[variables.qq]
+      - script: echo $[variables.qw]
+      - script: echo $[{{ variables.qq }}]
         displayName: 'Run a one-line script'  
