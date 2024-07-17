@@ -20,18 +20,16 @@ resources:
 pr: 
 - main
 
+pool:
+ name: my-vmss
 
 
 stages:
-
-
 - stage: 
   displayName: good
   jobs:
     
     - job: Work123
-      pool:   
-        vmImage: windows-latest
       steps:
       - script: echo $(qw)
       - script: echo ${{ variables.aqc }}
