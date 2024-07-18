@@ -34,11 +34,11 @@ stages:
       - task: AzureResourceManagerTemplateDeployment@3
         inputs:
           deploymentScope: 'Resource Group'
-          azureResourceManagerConnection: '<your-resource-manager-connection>'
-          subscriptionId: '<your-subscription-id>'
+          azureResourceManagerConnection: 'ARMtemplate'
+          subscriptionId: 'd2bbd387-76bc-4554-9747-4ae8f10eb883'
           action: 'Create Or Update Resource Group'
-          resourceGroupName: 'ARMPipelinesLAMP-rg'
-          location: '<your-closest-location>'
+          resourceGroupName: 'mytest-vm-redhat'
+          location: 'Australia East'
           templateLocation: 'Linked artifact'
           csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.json'
           csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
