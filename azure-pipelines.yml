@@ -21,7 +21,7 @@ pr:
 - main
 
 pool:
- name: my-vmss
+  vmImage: 'windows-latest'
 
 
 stages:
@@ -31,11 +31,16 @@ stages:
     
     - job: Work123
       steps:
-      - script: echo $(qw)
-      - script: echo ${{ variables.aqc }}
-      - script: echo $[variables.qq]
-      - script: echo $[variables.qw]
-      - script: echo $[variables.aqc]
-      - script: echo $[1+1]
-      - script: echo $[{{ variables.qq }}]
-        displayName: 'Run a one-line script'  
+      - task: AzureResourceManagerTemplateDeployment@3
+        inputs:
+          deploymentScope: 'Resource Group'
+          azureResourceManagerConnection: '<your-resource-manager-connection>'
+          subscriptionId: '<your-subscription-id>'
+          action: 'Create Or Update Resource Group'
+          resourceGroupName: 'ARMPipelinesLAMP-rg'
+          location: '<your-closest-location>'
+          templateLocation: 'Linked artifact'
+          csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.json'
+          csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
+          overrideParameters: '-siteName $(siteName) -administratorLogin $(adminUser) -administratorLoginPassword $(ARM_PASS)'
+          deploymentMode: 'Incremental'  
